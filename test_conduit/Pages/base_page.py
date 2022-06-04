@@ -100,8 +100,9 @@ class BasePage:
         return None
 
     def do_click(self, by_locator):
-        element = WebDriverWait(
-            self.driver, self.waiting_time).until(EC.element_to_be_clickable(by_locator))
+        # element = WebDriverWait(
+        #     self.driver, self.waiting_time).until(EC.element_to_be_clickable(by_locator))
+        element = self.driver.find_element_by_xpath(by_locator[1])
         element.click()
         return None
 
