@@ -20,7 +20,7 @@ class TestConduit:
         try:
             self.test_data = TestData()
             self.browser = webdriver.Chrome(ChromeDriverManager().install())
-            # self.browser.implicitly_wait(10)
+            self.browser.implicitly_wait(10)
             self.browser.maximize_window()
             self.mp = MainPage(self.browser, TestData.BASE_URL)
 
